@@ -48,6 +48,7 @@ npm install
 ```bash
 npm run start
 ```
+2. Refer postman_collection.json file on how to use the API End points.
 
 ## Admin Credentials
 To access admin features, use the following credentials:
