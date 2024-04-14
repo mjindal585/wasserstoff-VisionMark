@@ -6,11 +6,13 @@ VisionMark is a cutting-edge, mobile-first application aimed at simplifying the 
 
 ## Tech Stack Used
 
-- Node JS and Express for services 
+- Node and Express for services
+- Typescript
 - JWT for authentication
 - Brcrypt for storing password
 - MongoDB as database
 - Mongoose as ODM
+- Multer for file upload
 
 ## Installation
 
