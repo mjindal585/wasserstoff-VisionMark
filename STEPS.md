@@ -17,18 +17,16 @@ VisionMark is a cutting-edge, mobile-first application aimed at simplifying the 
 ## Installation
 
 1. Clone the repository:
-
 ```bash
 git clone <repository-url>
 cd repo-name
 ```
 2. Install dependencies:
-
 ```bash
 npm install
 ```
-
 3. Setup env taking reference from .env.example file.
+4. Clone https://github.com/mjindal585/annotations-flask-api and follow its README guide.
 
 ## Usage
 
