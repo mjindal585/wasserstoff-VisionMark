@@ -4,13 +4,37 @@
 
 VisionMark is a cutting-edge, mobile-first application aimed at simplifying the data collection and annotation process for preparing training datasets for YOLO image recognition models. This task challenges you, as a backend developer candidate, to architect and implement the backend services for VisionMark. Your goal is to develop a scalable, efficient system capable of handling image processing, user management, automatic annotations, and data exporting functionalities.
 
-### Tech Stack Used
+## Tech Stack Used
 
 - Node JS and Express for services 
 - JWT for authentication
 - Brcrypt for storing password
 - MongoDB as database
 - Mongoose as ODM
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd repo-name
+```
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Setup env taking reference from .env.example file.
+
+## Usage
+
+1. Run the Node server:
+
+```bash
+npm run start
+```
 
 ## How to Submit
 
