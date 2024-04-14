@@ -1,0 +1,714 @@
+{
+	"info": {
+		"_postman_id": "85d90321-a6ab-4f26-91c7-6f65fea5f19a",
+		"name": "VisionMark Backend Task",
+		"description": "Collections for NoteMaker.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13282870"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDIzOGVmZTQxMTgzNDM4MWE5ZTg5YWEiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQHN1Y2Nlc3NpdmUudGVjaCIsInJvbGUiOiJhZG1pbiIsInBhc3N3b3JkIjoiJDJiJDEwJGNjMjlXRVRXWlJST0x1RXhJZVVzQk9ZUlo5aE1Wb0k1Z1RtS3d5d0tjZEV1eTlwckxFeFEuIiwib3JpZ2luYWxJZCI6IjYwMjM4ZWZlNDExODM0MzgxYTllODlhYSIsImNyZWF0ZWRBdCI6IjIwMjEtMDItMTBUMDc6NDU6MDIuNTgxWiIsIl9fdiI6MCwiaWF0IjoxNjEyOTU1NzY2LCJleHAiOjE2MTMzMTU3NjZ9.sfyENHCCZYXJpZ4_yNqd57ZmRHei3Yqbpuahj6_A8Mo"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://localhost:9000/api/users/getAllUsers",
+						"description": "API for fetching the details of all the users.\n\nUsage:\n\nHeaders:\n1. Authorization : Provide token \n   Example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDIzOGVmZTQxMTgzNDM4MWE5ZTg5YWEiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQHN1Y2Nlc3NpdmUudGVjaCIsInJvbGUiOiJhZG1pbiIsInBhc3N3b3JkIjoiJDJiJDEwJGNjMjlXRVRXWlJST0x1RXhJZVVzQk9ZUlo5aE1Wb0k1Z1RtS3d5d0tjZEV1eTlwckxFeFEuIiwib3JpZ2luYWxJZCI6IjYwMjM4ZWZlNDExODM0MzgxYTllODlhYSIsImNyZWF0ZWRBdCI6IjIwMjEtMDItMTBUMDc6NDU6MDIuNTgxWiIsIl9fdiI6MCwiaWF0IjoxNjEyOTU1NzY2LCJleHAiOjE2MTMzMTU3NjZ9.sfyENHCCZYXJpZ4_yNqd57ZmRHei3Yqbpuahj6_A8Mo\n\nParameters\n1. skip (integer)\n(query)\t\nskip for pagination\n\n2. limit (integer)\n(query)\t\nlimit for pagination\n\n3. sort (boolean)\n(query)\t\nSort by name and email. If false, sort by chronological order.\n\n4. search (string)\n(query)\t\nSearch for name and email\n\n"
+					},
+					"response": [
+						{
+							"name": "getAllUsers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDIzOGVmZTQxMTgzNDM4MWE5ZTg5YWEiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQHN1Y2Nlc3NpdmUudGVjaCIsInJvbGUiOiJhZG1pbiIsInBhc3N3b3JkIjoiJDJiJDEwJGNjMjlXRVRXWlJST0x1RXhJZVVzQk9ZUlo5aE1Wb0k1Z1RtS3d5d0tjZEV1eTlwckxFeFEuIiwib3JpZ2luYWxJZCI6IjYwMjM4ZWZlNDExODM0MzgxYTllODlhYSIsImNyZWF0ZWRBdCI6IjIwMjEtMDItMTBUMDc6NDU6MDIuNTgxWiIsIl9fdiI6MCwiaWF0IjoxNjEyOTU1NzY2LCJleHAiOjE2MTMzMTU3NjZ9.sfyENHCCZYXJpZ4_yNqd57ZmRHei3Yqbpuahj6_A8Mo",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": "http://localhost:9000/api/users/getAllUsers"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjE5NzdkZDE2NTU0ZGEyMjg0Mjk4MTgiLCJpZCI6IjAwMSIsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZ29vZ2xlLmNvbSIsInJvbGUiOiJhZG1pbiIsInBhc3N3b3JkIjoiJDJiJDEwJDVrU0t1b2J5NmpnYkxrV09CRFZQdmVvcVI5M2hybnowUTE2Z3UuMkNFemdVRnBoUmFoVnRHIiwib3JpZ2luYWxJZCI6IjY2MTk3N2RkMTY1NTRkYTIyODQyOTgxOCIsImNyZWF0ZWRBdCI6IjIwMjQtMDQtMTJUMTg6MDU6MTcuODk3WiIsIl9fdiI6MCwiaWF0IjoxNzEyOTQ1NTQ4LCJleHAiOjE3MTMxNjE1NDh9.0KurSwRbokYPeFpFKd_Xp2XZtM5NX4YRipzJwCIv_Ac"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"testing user\",\n\t\"email\": \"testinguser@test.com\",\n\t\"password\": \"123456789\"\n}"
+						},
+						"url": "http://localhost:9000/api/users/create",
+						"description": "API for creating new user.\n\nUsage: \n\nHeaders:\n1. Authorization : Provide token \n   Example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDIzOGVmZTQxMTgzNDM4MWE5ZTg5YWEiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQHN1Y2Nlc3NpdmUudGVjaCIsInJvbGUiOiJhZG1pbiIsInBhc3N3b3JkIjoiJDJiJDEwJGNjMjlXRVRXWlJST0x1RXhJZVVzQk9ZUlo5aE1Wb0k1Z1RtS3d5d0tjZEV1eTlwckxFeFEuIiwib3JpZ2luYWxJZCI6IjYwMjM4ZWZlNDExODM0MzgxYTllODlhYSIsImNyZWF0ZWRBdCI6IjIwMjEtMDItMTBUMDc6NDU6MDIuNTgxWiIsIl9fdiI6MCwiaWF0IjoxNjEyOTU1NzY2LCJleHAiOjE2MTMzMTU3NjZ9.sfyENHCCZYXJpZ4_yNqd57ZmRHei3Yqbpuahj6_A8Mo\n\nRequest Body *\nUser details for user creation.\n\nExample Value\n{\n  \"name\": \"dummy user\",\n  \"email\": \"dummy@successive.tech\",\n  \"password\": \"12345678\"\n}"
+					},
+					"response": [
+						{
+							"name": "createUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDIzOGVmZTQxMTgzNDM4MWE5ZTg5YWEiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQHN1Y2Nlc3NpdmUudGVjaCIsInJvbGUiOiJhZG1pbiIsInBhc3N3b3JkIjoiJDJiJDEwJGNjMjlXRVRXWlJST0x1RXhJZVVzQk9ZUlo5aE1Wb0k1Z1RtS3d5d0tjZEV1eTlwckxFeFEuIiwib3JpZ2luYWxJZCI6IjYwMjM4ZWZlNDExODM0MzgxYTllODlhYSIsImNyZWF0ZWRBdCI6IjIwMjEtMDItMTBUMDc6NDU6MDIuNTgxWiIsIl9fdiI6MCwiaWF0IjoxNjEyOTU1NzY2LCJleHAiOjE2MTMzMTU3NjZ9.sfyENHCCZYXJpZ4_yNqd57ZmRHei3Yqbpuahj6_A8Mo"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"example\",\n\t\"email\": \"example@successive.tech\",\n\t\"password\": \"12345678\"\n\t\n}"
+								},
+								"url": "http://localhost:9000/api/users/createUser"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "113",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Wed, 10 Feb 2021 12:16:37 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"71-/9r9VBv0DARCstbCQoJ3haulgQc\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"status\":\"ok\",\"message\":\"User Created Successfully\",\"data\":{\"name\":\"example\",\"email\":\"example@successive.tech\"}}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"admin@admin.com\",\n\t\"password\": \"admin@123\"\n}"
+						},
+						"url": "http://localhost:9000/api/users/login",
+						"description": "API for user login.\n\nUsage: \n\nLogin Ceredentials *\n(body)\t\n\nExample Value\n{\n  \"email\": \"dummyuser@successive.tech\",\n  \"password\": \"123456\"\n}"
+					},
+					"response": []
+				}
+			],
+			"description": "Definitions of API for User collection."
+		},
+		{
+			"name": "Image",
+			"item": [
+				{
+					"name": "upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsIl9pZCI6IjY2MWJjNTBjM2JmNDgyMDQzMzQ5NzRlZSIsImlkIjoiNjYxYmM1MGMzYmY0ODIwNDMzNDk3NGVlIiwibmFtZSI6InRlc3RpbmcgdXNlciIsImVtYWlsIjoidGVzdGluZ3VzZXJAdGVzdC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBSlhOQUUvRWVaN2UzNnVIQ1FBZnQuM1BiSDFQVmEwM2ZRNUN0L3AubHVDUE9jT1VDRDNZZSIsIm9yaWdpbmFsSWQiOiI2NjFiYzUwYzNiZjQ4MjA0MzM0OTc0ZWUiLCJjcmVhdGVkQnkiOiI2NjFiYzNiYzcwMzVlNjAyY2MzN2RhNzQiLCJjcmVhdGVkQXQiOiIyMDI0LTA0LTE0VDExOjU5OjA4LjYxMVoiLCJfX3YiOjAsImlhdCI6MTcxMzA5NTk5OSwiZXhwIjoxNzEzMzExOTk5fQ.sPXdqTvfDLqXbHP97MMwTbzrRmMSzL3LKz1ufnKyQjE"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/mohitjindal/Documents/pexels-mike-bird-170811.jpg"
+								}
+							]
+						},
+						"url": "http://localhost:9000/api/images/upload"
+					},
+					"response": [
+						{
+							"name": "createUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDIzOGVmZTQxMTgzNDM4MWE5ZTg5YWEiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQHN1Y2Nlc3NpdmUudGVjaCIsInJvbGUiOiJhZG1pbiIsInBhc3N3b3JkIjoiJDJiJDEwJGNjMjlXRVRXWlJST0x1RXhJZVVzQk9ZUlo5aE1Wb0k1Z1RtS3d5d0tjZEV1eTlwckxFeFEuIiwib3JpZ2luYWxJZCI6IjYwMjM4ZWZlNDExODM0MzgxYTllODlhYSIsImNyZWF0ZWRBdCI6IjIwMjEtMDItMTBUMDc6NDU6MDIuNTgxWiIsIl9fdiI6MCwiaWF0IjoxNjEyOTU1NzY2LCJleHAiOjE2MTMzMTU3NjZ9.sfyENHCCZYXJpZ4_yNqd57ZmRHei3Yqbpuahj6_A8Mo"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"example\",\n\t\"email\": \"example@successive.tech\",\n\t\"password\": \"12345678\"\n\t\n}"
+								},
+								"url": "http://localhost:9000/api/users/createUser"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "113",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Wed, 10 Feb 2021 12:16:37 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"71-/9r9VBv0DARCstbCQoJ3haulgQc\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"status\":\"ok\",\"message\":\"User Created Successfully\",\"data\":{\"name\":\"example\",\"email\":\"example@successive.tech\"}}"
+						}
+					]
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJfaWQiOiI2NjFiYzNiYzcwMzVlNjAyY2MzN2RhNzQiLCJpZCI6IjAwMSIsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkcC9PaEVrWEVHeC5sSnBqd2NzZGZGdU9tOVRUR2g1SldPTC5BUzYxL0w0ei9PSXJIcGxMU0MiLCJvcmlnaW5hbElkIjoiNjYxYmMzYmM3MDM1ZTYwMmNjMzdkYTc0IiwiY3JlYXRlZEF0IjoiMjAyNC0wNC0xNFQxMTo1MzozMi41NjNaIiwiX192IjowLCJpYXQiOjE3MTMwOTU2NTUsImV4cCI6MTcxMzMxMTY1NX0.pzCgGnBHsCvURnrSjBWKQZZ-IzziSA0S42afitDOJcc"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": "http://localhost:9000/api/images/getAll"
+					},
+					"response": [
+						{
+							"name": "createUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDIzOGVmZTQxMTgzNDM4MWE5ZTg5YWEiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQHN1Y2Nlc3NpdmUudGVjaCIsInJvbGUiOiJhZG1pbiIsInBhc3N3b3JkIjoiJDJiJDEwJGNjMjlXRVRXWlJST0x1RXhJZVVzQk9ZUlo5aE1Wb0k1Z1RtS3d5d0tjZEV1eTlwckxFeFEuIiwib3JpZ2luYWxJZCI6IjYwMjM4ZWZlNDExODM0MzgxYTllODlhYSIsImNyZWF0ZWRBdCI6IjIwMjEtMDItMTBUMDc6NDU6MDIuNTgxWiIsIl9fdiI6MCwiaWF0IjoxNjEyOTU1NzY2LCJleHAiOjE2MTMzMTU3NjZ9.sfyENHCCZYXJpZ4_yNqd57ZmRHei3Yqbpuahj6_A8Mo"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"example\",\n\t\"email\": \"example@successive.tech\",\n\t\"password\": \"12345678\"\n\t\n}"
+								},
+								"url": "http://localhost:9000/api/users/createUser"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "113",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Wed, 10 Feb 2021 12:16:37 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"71-/9r9VBv0DARCstbCQoJ3haulgQc\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"status\":\"ok\",\"message\":\"User Created Successfully\",\"data\":{\"name\":\"example\",\"email\":\"example@successive.tech\"}}"
+						}
+					]
+				},
+				{
+					"name": "get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjE5NzdkZDE2NTU0ZGEyMjg0Mjk4MTgiLCJpZCI6IjAwMSIsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZ29vZ2xlLmNvbSIsInJvbGUiOiJhZG1pbiIsInBhc3N3b3JkIjoiJDJiJDEwJDVrU0t1b2J5NmpnYkxrV09CRFZQdmVvcVI5M2hybnowUTE2Z3UuMkNFemdVRnBoUmFoVnRHIiwib3JpZ2luYWxJZCI6IjY2MTk3N2RkMTY1NTRkYTIyODQyOTgxOCIsImNyZWF0ZWRBdCI6IjIwMjQtMDQtMTJUMTg6MDU6MTcuODk3WiIsIl9fdiI6MCwiaWF0IjoxNzEzMDE4NTkxLCJleHAiOjE3MTMyMzQ1OTF9.Yqfn5Z-eSp2SfR4XzxBo7amtcF3H-1zK6sJfS7U5QR0"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/mohitjindal/Documents/pexels-mike-bird-170811.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/images/?id=661ab0f0358de020e0378d65",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"images",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "661ab0f0358de020e0378d65"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDIzOGVmZTQxMTgzNDM4MWE5ZTg5YWEiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQHN1Y2Nlc3NpdmUudGVjaCIsInJvbGUiOiJhZG1pbiIsInBhc3N3b3JkIjoiJDJiJDEwJGNjMjlXRVRXWlJST0x1RXhJZVVzQk9ZUlo5aE1Wb0k1Z1RtS3d5d0tjZEV1eTlwckxFeFEuIiwib3JpZ2luYWxJZCI6IjYwMjM4ZWZlNDExODM0MzgxYTllODlhYSIsImNyZWF0ZWRBdCI6IjIwMjEtMDItMTBUMDc6NDU6MDIuNTgxWiIsIl9fdiI6MCwiaWF0IjoxNjEyOTU1NzY2LCJleHAiOjE2MTMzMTU3NjZ9.sfyENHCCZYXJpZ4_yNqd57ZmRHei3Yqbpuahj6_A8Mo"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"example\",\n\t\"email\": \"example@successive.tech\",\n\t\"password\": \"12345678\"\n\t\n}"
+								},
+								"url": "http://localhost:9000/api/users/createUser"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "113",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Wed, 10 Feb 2021 12:16:37 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"71-/9r9VBv0DARCstbCQoJ3haulgQc\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"status\":\"ok\",\"message\":\"User Created Successfully\",\"data\":{\"name\":\"example\",\"email\":\"example@successive.tech\"}}"
+						}
+					]
+				},
+				{
+					"name": "annoate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJfaWQiOiI2NjFiYzNiYzcwMzVlNjAyY2MzN2RhNzQiLCJpZCI6IjAwMSIsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkcC9PaEVrWEVHeC5sSnBqd2NzZGZGdU9tOVRUR2g1SldPTC5BUzYxL0w0ei9PSXJIcGxMU0MiLCJvcmlnaW5hbElkIjoiNjYxYmMzYmM3MDM1ZTYwMmNjMzdkYTc0IiwiY3JlYXRlZEF0IjoiMjAyNC0wNC0xNFQxMTo1MzozMi41NjNaIiwiX192IjowLCJpYXQiOjE3MTMwOTU2NTUsImV4cCI6MTcxMzMxMTY1NX0.pzCgGnBHsCvURnrSjBWKQZZ-IzziSA0S42afitDOJcc"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"661bc7edc135eb0f58167ced\"\n}"
+						},
+						"url": "http://localhost:9000/api/images/annotate"
+					},
+					"response": [
+						{
+							"name": "createUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDIzOGVmZTQxMTgzNDM4MWE5ZTg5YWEiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQHN1Y2Nlc3NpdmUudGVjaCIsInJvbGUiOiJhZG1pbiIsInBhc3N3b3JkIjoiJDJiJDEwJGNjMjlXRVRXWlJST0x1RXhJZVVzQk9ZUlo5aE1Wb0k1Z1RtS3d5d0tjZEV1eTlwckxFeFEuIiwib3JpZ2luYWxJZCI6IjYwMjM4ZWZlNDExODM0MzgxYTllODlhYSIsImNyZWF0ZWRBdCI6IjIwMjEtMDItMTBUMDc6NDU6MDIuNTgxWiIsIl9fdiI6MCwiaWF0IjoxNjEyOTU1NzY2LCJleHAiOjE2MTMzMTU3NjZ9.sfyENHCCZYXJpZ4_yNqd57ZmRHei3Yqbpuahj6_A8Mo"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"example\",\n\t\"email\": \"example@successive.tech\",\n\t\"password\": \"12345678\"\n\t\n}"
+								},
+								"url": "http://localhost:9000/api/users/createUser"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "113",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Wed, 10 Feb 2021 12:16:37 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"71-/9r9VBv0DARCstbCQoJ3haulgQc\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"status\":\"ok\",\"message\":\"User Created Successfully\",\"data\":{\"name\":\"example\",\"email\":\"example@successive.tech\"}}"
+						}
+					]
+				},
+				{
+					"name": "approve",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJfaWQiOiI2NjFiYzNiYzcwMzVlNjAyY2MzN2RhNzQiLCJpZCI6IjAwMSIsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkcC9PaEVrWEVHeC5sSnBqd2NzZGZGdU9tOVRUR2g1SldPTC5BUzYxL0w0ei9PSXJIcGxMU0MiLCJvcmlnaW5hbElkIjoiNjYxYmMzYmM3MDM1ZTYwMmNjMzdkYTc0IiwiY3JlYXRlZEF0IjoiMjAyNC0wNC0xNFQxMTo1MzozMi41NjNaIiwiX192IjowLCJpYXQiOjE3MTMwOTU2NTUsImV4cCI6MTcxMzMxMTY1NX0.pzCgGnBHsCvURnrSjBWKQZZ-IzziSA0S42afitDOJcc"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"661bc7edc135eb0f58167ced\",\n    \"status\":\"APPROVED\"\n}"
+						},
+						"url": "http://localhost:9000/api/images/approve"
+					},
+					"response": [
+						{
+							"name": "createUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDIzOGVmZTQxMTgzNDM4MWE5ZTg5YWEiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQHN1Y2Nlc3NpdmUudGVjaCIsInJvbGUiOiJhZG1pbiIsInBhc3N3b3JkIjoiJDJiJDEwJGNjMjlXRVRXWlJST0x1RXhJZVVzQk9ZUlo5aE1Wb0k1Z1RtS3d5d0tjZEV1eTlwckxFeFEuIiwib3JpZ2luYWxJZCI6IjYwMjM4ZWZlNDExODM0MzgxYTllODlhYSIsImNyZWF0ZWRBdCI6IjIwMjEtMDItMTBUMDc6NDU6MDIuNTgxWiIsIl9fdiI6MCwiaWF0IjoxNjEyOTU1NzY2LCJleHAiOjE2MTMzMTU3NjZ9.sfyENHCCZYXJpZ4_yNqd57ZmRHei3Yqbpuahj6_A8Mo"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"example\",\n\t\"email\": \"example@successive.tech\",\n\t\"password\": \"12345678\"\n\t\n}"
+								},
+								"url": "http://localhost:9000/api/users/createUser"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"name": "access-control-allow-origin",
+									"description": ""
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive",
+									"name": "connection",
+									"description": ""
+								},
+								{
+									"key": "content-length",
+									"value": "113",
+									"name": "content-length",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"name": "content-type",
+									"description": ""
+								},
+								{
+									"key": "date",
+									"value": "Wed, 10 Feb 2021 12:16:37 GMT",
+									"name": "date",
+									"description": ""
+								},
+								{
+									"key": "etag",
+									"value": "W/\"71-/9r9VBv0DARCstbCQoJ3haulgQc\"",
+									"name": "etag",
+									"description": ""
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express",
+									"name": "x-powered-by",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"status\":\"ok\",\"message\":\"User Created Successfully\",\"data\":{\"name\":\"example\",\"email\":\"example@successive.tech\"}}"
+						}
+					]
+				}
+			],
+			"description": "Definitions of API in Image Contorller"
+		},
+		{
+			"name": "Detect",
+			"item": [
+				{
+					"name": "detect",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"file_path\": \"/Users/mohitjindal/Desktop/images/raw/1713029184138-380330420-train.jpeg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/detect"
+					},
+					"response": []
+				}
+			],
+			"description": "Python svc build in Flask to detect objects"
+		}
+	]
+}

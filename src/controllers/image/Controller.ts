@@ -9,12 +9,13 @@ import VersionableRepository from '../../repositories/versionable/VersionableRep
 
 class ImageController {
     public async getAll(req: IRequest, res: Response, next: NextFunction) {
+        const creatorRole = req.userData.role;
 
         let skipvVar: number;
         let limitVar: number;
         let sort: boolean;
         let search: string = '';
-        let status: string = '';
+        let statusIn: [string];
 
         if ('limit' in req.query) {
             limitVar = Number(req.query.limit);
@@ -46,13 +47,16 @@ class ImageController {
             search = req.query.search;
         }
 
-        if ('status' in req.query) {
-            status = req.query.status;
+        if ('statusIn' in req.query) {
+            statusIn = req.query.status;
         }
         const query: any = {
             deletedAt: { $exists: false },
             updatedAt: { $exists: false },
-            ...status && { status },
+            ...statusIn && { status: { $in: statusIn } },
+            ...creatorRole !== 'admin' ? {
+                createdBy: req.userData._id,
+            } : {},
             $or: [
                 {
                     fileName: {

@@ -3,7 +3,7 @@ import { userRouter, imageRouter } from './controllers';
 
 const mainRouter = Router();
 
-mainRouter.use('/image', imageRouter);
-mainRouter.use('/user', userRouter);
+mainRouter.use('/images', imageRouter);
+mainRouter.use('/users', userRouter);
 
 export default mainRouter;

@@ -13,7 +13,7 @@ imageRoute.route('/')
 imageRoute.post('/upload', authMiddleware('imageRoutes', 'upload'), upload.single('image'), Controller.upload);
 imageRoute.post('/annotate', authMiddleware('imageRoutes', 'annotate'), validationHandler(validation.annotate), Controller.annotate);
 imageRoute.post('/approve', authMiddleware('imageRoutes', 'approve'), validationHandler(validation.approve), Controller.approve);
-imageRoute.get('/getall', authMiddleware('imageRoutes', 'read'), validationHandler(validation.get), Controller.getAll);
+imageRoute.get('/getall', authMiddleware('imageRoutes', 'read'), validationHandler(validation.getAll), Controller.getAll);
 
 
 export default imageRoute;
