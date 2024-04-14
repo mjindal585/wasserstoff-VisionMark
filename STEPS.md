@@ -14,6 +14,19 @@ VisionMark is a cutting-edge, mobile-first application aimed at simplifying the 
 - Mongoose as ODM
 - Multer for file upload
 
+## Linting
+[Eslint](https://github.com/eslint/eslint) with Typescript Standard Style.
+- To run lint:
+  ```bash
+  npm run lint
+  ```
+
+## IDE
+Preferred IDE is `VSCODE`
+Please enable following plugins for your editor:
+- **EditorConfig:** To enable reading of .editorconfig file for consistent coding convention.
+- **Eslint:** For linting errors
+
 ## Installation
 
 1. Clone the repository:
@@ -35,18 +48,12 @@ npm install
 ```bash
 npm run start
 ```
-## Linting
-We also use [Eslint](https://github.com/eslint/eslint) with Typescript Standard Style.
-- To run lint:
-  ```bash
-  npm run lint
-  ```
-## IDE
-Preferred IDE is `VSCODE`
-Please enable following plugins for your editor:
-- **EditorConfig:** To enable reading of .editorconfig file for consistent coding convention.
-- **Eslint:** For linting errors
 
+## Admin Credentials
+To access admin features, use the following credentials:
+
+- Email: admin@admin.com
+- Password: admin@123 (set in environment variables)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

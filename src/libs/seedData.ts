@@ -17,7 +17,7 @@ export default function seedData() {
                 user.createSeedUser({
                     id: '001',
                     name: 'admin',
-                    email: 'admin@google.com',
+                    email: 'admin@admin.com',
                     role: 'admin',
                     password: hashedPassword,
                     _id: id,
