@@ -35,15 +35,18 @@ npm install
 ```bash
 npm run start
 ```
+## Linting
+We also use [Eslint](https://github.com/eslint/eslint) with Typescript Standard Style.
+- To run lint:
+  ```bash
+  npm run lint
+  ```
+## IDE
+Preferred IDE is `VSCODE`
+Please enable following plugins for your editor:
+- **EditorConfig:** To enable reading of .editorconfig file for consistent coding convention.
+- **Eslint:** For linting errors
 
-## How to Submit
 
-- Fork this repository.
-- Complete your project as described above, within your fork.
-- Push all of your changes to your fork on GitHub and submit a pull request to this repository.
-- Email hr@thewasserstoff.com with the subject "VisionMark Backend Developer Task Submission" and include your GitHub repository link in the email.
-
-## Q&A
-
-Should you have any questions or require clarification on the task, please open an issue in this repository, and we will get back to you as soon as possible.
-
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
